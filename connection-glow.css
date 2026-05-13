@@ -1,0 +1,201 @@
+/* Change colors here */
+:root {
+  --spotify-color: #1db954;
+  --twitch-color: #9146ff;
+  --youtube-color: #ff0000;
+  --reddit-color: #ff4500;
+  --paypal-color: #005aa3;
+  --tiktok-color: #ff0050;
+  --steam-color: #66c0f4;
+  --crunchyroll-color: #f47521;
+  --ebay-color: #f5af02;
+  --xbox-color: #2ca243;
+  --battlenet-color: #0290ff;
+  --playstation-color: #0077df;
+  --epic-games-color-light: black;
+  --epic-games-color-dark: white;
+  --github-color-dark: white;
+  --github-color-light: black;
+  --x-color-light: black;
+  --x-color-dark: white;
+  --league-of-legends-color: #cea146;
+  --twitter-color: #08a0e9;
+  --instagram-color: #c13584;
+  --riot-games-color: #ea0029;
+  --domain-color-light: black;
+  --domain-color-dark: white;
+  --skype-color: #00aff0;
+  --facebook-color: #0866ff;
+  --Bungienet-color-dark: white;
+  --Bungienet-color-light: black;
+  --Amazon-Music-color: #46ced7;
+}
+
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Spotify"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Spotify"]) {
+  color: var(--spotify-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Twitch"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Twitch"]) {
+  color: var(--twitch-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="YouTube"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="YouTube"]) {
+  color: var(--youtube-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Reddit"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Reddit"]) {
+  color: var(--reddit-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="PayPal"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="PayPal"]) {
+  color: var(--paypal-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="TikTok"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="TikTok"]) {
+  color: var(--tiktok-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Steam"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Steam"]) {
+  color: var(--steam-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Crunchyroll"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Crunchyroll"]) {
+  color: var(--crunchyroll-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="eBay"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="eBay"]) {
+  color: var(--ebay-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Xbox"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Xbox"]) {
+  color: var(--xbox-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Battle.net"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Battle.net"]) {
+  color: var(--battlenet-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has(
+    [aria-label="PlayStation Network"]
+  )
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has(
+    [aria-label="PlayStation Network"]
+  ) {
+  color: var(--playstation-color) !important;
+}
+[class*="profileColors_"]:where(.theme-light)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="Epic Games"]) {
+  color: var(--epic-games-color-light) !important;
+}
+[class*="profileColors_"]:where(.theme-dark)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="Epic Games"]) {
+  color: var(--epic-games-color-dark) !important;
+}
+[class*="profileColors_"]:where(.theme-light)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="GitHub"]) {
+  color: var(--github-color-light) !important;
+}
+[class*="profileColors_"]:where(.theme-dark)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="GitHub"]) {
+  color: var(--github-color-dark) !important;
+}
+[class*="profileColors_"]:where(.theme-dark)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="X"]) {
+  color: var(--x-color-dark) !important;
+}
+[class*="profileColors_"]:where(.theme-light)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="X"]) {
+  color: var(--x-color-light) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has(
+    [aria-label="League of Legends"]
+  )
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has(
+    [aria-label="League of Legends"]
+  ) {
+  color: var(--league-of-legends-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Twitter"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Twitter"]) {
+  color: var(--twitter-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Instagram"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Instagram"]) {
+  color: var(--instagram-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Riot Games"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Riot Games"]) {
+  color: var(--riot-games-color) !important;
+}
+[class*="profileColors_"]:where(.theme-light)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="Domain"]) {
+  color: var(--domain-color-light) !important;
+}
+[class*="profileColors_"]:where(.theme-dark)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="Domain"]) {
+  color: var(--domain-color-dark) !important;
+}
+[class*="profileColors_"]:where(.theme-light)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="Bungie.net"]) {
+  color: var(--Bungienet-color-light) !important;
+}
+[class*="profileColors_"]:where(.theme-dark)
+  [class^="connectedAccountContainer__"]:hover:has([aria-label="Bungie.net"]) {
+  color: var(--Bungienet-color-dark) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Skype"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Skype"]) {
+  color: var(--skype-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Facebook"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Facebook"]) {
+  color: var(--facebook-color) !important;
+}
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Amazon Music"])
+  [class*="connectedAccountNameText__"],
+[class^="connectedAccountContainer__"]:hover:has([aria-label="Amazon Music"]) {
+  color: var(--Amazon-Music-color) !important;
+}
+/* change the glow effect here */
+[class^="connectedAccountContainer__"]:hover {
+  color: white;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  box-shadow: 0px 0px 10.9px 1px currentColor;
+}
+/* fade in and out animation made by callme_h */
+[class^="connectedAccountContainer__"] {
+  transition: all 0.25s ease;
+}
+[class^="connectedAccountContainer__"]:hover
+  [class*="connectedAccountNameText__"] {
+  color: rgb(255, 0, 0);
+  background-clip: text;
+  animation:
+    fadeInOut 0.25s ease,
+    rainbowText 5s linear infinite 0.25s;
+}
+
+[class^="connectedAccountContainer__"],
+[class*="connectedAccountNameText__"] {
+  color: white;
+  transition: all 0.5s ease;
+}

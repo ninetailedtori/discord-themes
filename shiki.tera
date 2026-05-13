@@ -1,0 +1,56 @@
+---
+whiskers:
+  version: "^2.5.1"
+  matrix:
+    - flavor
+  filename: "shiki-{{ flavor.identifier }}.css"
+  hex_format: "#{{r}}{{g}}{{b}}{{a}}"
+---
+:root {
+  --shiki-color-foreground: {{ text.hex }};
+  --shiki-color-background: {{ mantle.hex }};
+
+  --shiki-token-constant: {{ peach.hex }};
+  --shiki-token-string: {{ green.hex }};
+  --shiki-token-comment: {{ overlay2.hex }};
+  --shiki-token-keyword: {{ mauve.hex }};
+  --shiki-token-parameter: {{ maroon.hex }};
+  --shiki-token-function: {{ blue.hex }};
+  --shiki-token-string-expression: {{ pink.hex }};
+  --shiki-token-punctuation: {{ sky.hex }};
+  --shiki-token-link: {{ blue.hex }};
+
+  --shiki-ansi-black: {{ flavor.ansi_colors.black.hex }};
+  --shiki-ansi-black-dim: {{ flavor.ansi_colors.black.hex }}cc;
+  --shiki-ansi-red: {{ flavor.ansi_colors.red.hex }};
+  --shiki-ansi-red-dim: {{ flavor.ansi_colors.red.hex }}cc;
+  --shiki-ansi-green: {{ flavor.ansi_colors.green.hex }};
+  --shiki-ansi-green-dim: {{ flavor.ansi_colors.green.hex }}cc;
+  --shiki-ansi-yellow: {{ flavor.ansi_colors.yellow.hex }};
+  --shiki-ansi-yellow-dim: {{ flavor.ansi_colors.yellow.hex }}cc;
+  --shiki-ansi-blue: {{ flavor.ansi_colors.blue.hex }};
+  --shiki-ansi-blue-dim: {{ flavor.ansi_colors.blue.hex }}cc;
+  --shiki-ansi-magenta: {{ flavor.ansi_colors.magenta.hex }};
+  --shiki-ansi-magenta-dim: {{ flavor.ansi_colors.magenta.hex }}cc;
+  --shiki-ansi-cyan: {{ flavor.ansi_colors.cyan.hex }};
+  --shiki-ansi-cyan-dim: {{ flavor.ansi_colors.cyan.hex }}cc;
+  --shiki-ansi-white: {{ flavor.ansi_colors.white.hex }};
+  --shiki-ansi-white-dim: {{ flavor.ansi_colors.white.hex }}cc;
+
+  --shiki-ansi-bright-black: {{ flavor.ansi_colors.bright_black.hex }};
+  --shiki-ansi-bright-black-dim: {{ flavor.ansi_colors.bright_black.hex }}cc;
+  --shiki-ansi-bright-red: {{ flavor.ansi_colors.bright_red.hex }};
+  --shiki-ansi-bright-red-dim: {{ flavor.ansi_colors.bright_red.hex }}cc;
+  --shiki-ansi-bright-green: {{ flavor.ansi_colors.bright_green.hex }};
+  --shiki-ansi-bright-green-dim: {{ flavor.ansi_colors.bright_green.hex }}cc;
+  --shiki-ansi-bright-yellow: {{ flavor.ansi_colors.bright_yellow.hex }};
+  --shiki-ansi-bright-yellow-dim: {{ flavor.ansi_colors.bright_yellow.hex }}cc;
+  --shiki-ansi-bright-blue: {{ flavor.ansi_colors.bright_blue.hex }};
+  --shiki-ansi-bright-blue-dim: {{ flavor.ansi_colors.bright_blue.hex }}cc;
+  --shiki-ansi-bright-magenta: {{ flavor.ansi_colors.bright_magenta.hex }};
+  --shiki-ansi-bright-magenta-dim: {{ flavor.ansi_colors.bright_magenta.hex }}cc;
+  --shiki-ansi-bright-cyan: {{ flavor.ansi_colors.bright_cyan.hex }};
+  --shiki-ansi-bright-cyan-dim: {{ flavor.ansi_colors.bright_cyan.hex }}cc;
+  --shiki-ansi-bright-white: {{ flavor.ansi_colors.bright_white.hex }};
+  --shiki-ansi-bright-white-dim: {{ flavor.ansi_colors.bright_white.hex }}cc;
+}

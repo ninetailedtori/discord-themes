@@ -1,0 +1,23 @@
+{
+  "name": "catppuccin-themes",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare": "pnpm run lint && pnpm run fmt",
+    "lint": "pnpm run lint:oxlint && pnpm run lint:eslint",
+    "lint:oxlint": "oxlint . --fix",
+    "lint:eslint": "eslint . --fix --cache",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check ."
+  },
+  "dependencies": {
+    "@catppuccin/palette": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-oxlint": "^1.67.0",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0"
+  }
+}

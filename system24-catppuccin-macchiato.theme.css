@@ -1,0 +1,444 @@
+/**
+ * @name system24 (catppuccin macchiato)
+ * @description a tui-like discord theme. based on catppuccin macchiato theme (https://catppuccin.com).
+ * @author ninetailedtori (based on refact0r's system24 theme)
+ * @version 1.0.0
+ */
+
+/* import theme modules */
+@import "bartenders.css";
+@import "better-searchbar.css";
+@import "chatbar-placeholder.css";
+@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
+@import "shiki-macchiato.css";
+@import url("https://unpkg.com/@catppuccin/highlightjs@1.0.0/css/catppuccin-variables.important.css");
+/* @import url("https://refact0r.github.io/system24/build/system24.css"); */
+@import url("http://127.0.0.1:8000/system24.css");
+
+body {
+  --bartender-width: 4ch; /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
+  --font: "Inria Sans"; /* change to "" for default discord font */
+  --font-size: 11px;
+  font-weight: 400; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
+  --code-font: "JetBrainsMono Nerd Font"; /* change to "" for default discord font */
+  --code-font-size: 14px;
+  --code-font-weight: 600;
+
+  letter-spacing: 0ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
+
+  /* sizes */
+  --gap: 12px; /* spacing between panels */
+  --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+  --border-thickness: 2px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+  --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+
+  /* animation/transition options */
+  --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+  --list-item-transition: 0.2s ease; /* transition for list items */
+  --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+
+  /* top bar options */
+  --top-bar-height: var(
+    --gap
+  ); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+  --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+  --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+  --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+  /* window controls */
+  --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+  --window-control-size: 10px; /* size of custom window controls */
+
+  /* dms button options */
+  --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+  --dms-icon-svg-url: url(""); /* icon svg url. MUST BE A SVG. */
+  --dms-icon-svg-size: cover; /* size of the svg (css mask-size property) */
+  --dms-icon-color-before: rgba(
+    var(--ctp-macchiato-base-rgb)
+  ); /* normal icon color */
+  --dms-icon-color-after: var(
+    --ctp-macchiato-accent-rgb
+  ); /* icon color when button is hovered/selected */
+  --custom-dms-background: color; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+  --dms-background-image-url: url(""); /* url of the background image */
+  --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+  --dms-background-color: linear-gradient(
+    135deg,
+    rgba(var(--ctp-macchiato-rosewater-rgb)),
+    rgba(var(--ctp-macchiato-flamingo-rgb)),
+    rgba(var(--ctp-macchiato-pink-rgb)),
+    rgba(var(--ctp-macchiato-mauve-rgb)),
+    rgba(var(--ctp-macchiato-red-rgb)),
+    rgba(var(--ctp-macchiato-maroon-rgb)),
+    rgba(var(--ctp-macchiato-peach-rgb)),
+    rgba(var(--ctp-macchiato-yellow-rgb)),
+    rgba(var(--ctp-macchiato-green-rgb)),
+    rgba(var(--ctp-macchiato-teal-rgb)),
+    rgba(var(--ctp-macchiato-sky-rgb)),
+    rgba(var(--ctp-macchiato-sapphire-rgb)),
+    rgba(var(--ctp-macchiato-blue-rgb)),
+    rgba(var(--ctp-macchiato-lavender-rgb))
+  ); /* fixed color/gradient (css background property) */
+
+  /* background image options */
+  --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+  --background-image-url: url(""); /* url of the background image */
+
+  /* transparency/blur options */ /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --ctp-macchiato-mantle-rgb: hsla(220, 15%, 10%, 0.7); */
+  --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+  --remove-bg-layer: off; /* off: no changes, on: remove the base --ctp-macchiato-base-rgb layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+  --panel-blur: off; /* off: no changes, on: blur the background of panels */
+  --blur-amount: 6px; /* amount of blur */
+  --bg-floating: var(
+    --ctp-macchiato-base-rgb
+  ); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+  /* other options */
+  --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+
+  /* unrounding options */
+  --unrounding: on; /* off: default, on: remove rounded corners from panels */
+
+  /* styling options */
+  --custom-spotify-bar: on; /* off: default, on: custom text-like spotify progress bar */
+  --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
+  --ascii-loader: cats; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
+
+  /* panel labels */
+  --panel-labels: on; /* off: default, on: add labels to panels */
+  --label-color: var(--text-muted); /* color of labels */
+  --label-font: "JetBrainsMono Nerd Font";
+  --label-font-size: 14px;
+  --label-font-weight: 600; /* font weight of labels */
+}
+
+:root:is(.theme-dark, .theme-darker, .theme-darkest, .theme-light) {
+  --colors: on; /* off: discord default colors, on: midnight custom colors */
+
+  --ctp-macchiato-overlay2-15: rgba(var(--ctp-macchiato-overlay2-rgb) / 15%);
+  --ctp-macchiato-overlay2-30: rgba(var(--ctp-macchiato-overlay2-rgb) / 30%);
+
+  --ctp-macchiato-accent-rgb: var(--ctp-macchiato-rosewater-rgb);
+  --ctp-macchiato-accent-rgb-2: var(--ctp-macchiato-flamingo-rgb);
+
+  /* text colors */
+  --text-0: rgba(var(--ctp-macchiato-base-rgb)); /* text on colored elements */
+  --text-1: rgba(
+    var(--ctp-macchiato-crust-rgb)
+  ); /* bright text on colored elements */
+  --text-2: rgba(
+    var(--ctp-macchiato-accent-rgb)
+  ); /* headings and important text */
+  --text-3: rgba(var(--ctp-macchiato-text-rgb)); /* normal text */
+  --text-4: rgba(
+    var(--ctp-macchiato-subtext0-rgb)
+  ); /* icon buttons and channels */
+  --text-5: rgba(
+    var(--ctp-macchiato-overlay2-rgb)
+  ); /* muted channels/chats and timestamps */
+
+  /* background and dark colors */
+  --bg-1: rgba(
+    var(--ctp-macchiato-surface1-rgb)
+  ); /* dark buttons when clicked */
+  --bg-2: rgba(var(--ctp-macchiato-surface0-rgb)); /* dark buttons */
+  --bg-3: rgba(
+    var(--ctp-macchiato-mantle-rgb)
+  ); /* spacing, secondary elements */
+  --bg-4: rgba(var(--ctp-macchiato-base-rgb)); /* main background color */
+  --hover: var(
+    --ctp-macchiato-overlay2-15
+  ); /* channels and buttons when hovered */
+  --active: var(
+    --ctp-macchiato-overlay2-30
+  ); /* channels and buttons when clicked or selected */
+  --active-2: var(
+    --ctp-macchiato-overlay2-30
+  ); /* extra state for transparent buttons */
+  --message-hover: var(--hover); /* messages when hovered */
+
+  /* accent colors */
+  --accent-1: rgba(
+    var(--ctp-macchiato-accent-rgb)
+  ); /* links and other accent text */
+  --accent-2: rgba(var(--ctp-macchiato-accent-rgb)); /* small accent elements */
+  --accent-3: rgba(var(--ctp-macchiato-accent-rgb)); /* accent buttons */
+  --accent-4: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-accent-rgb)),
+    black 5%
+  ); /* accent buttons when hovered */
+  --accent-5: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-accent-rgb)),
+    black 10%
+  ); /* accent buttons when clicked */
+  --accent-new: rgba(
+    var(--ctp-macchiato-red-rgb)
+  ); /* stuff that's normally red like mute/deafen buttons */
+  --mention: rgba(
+    var(--ctp-macchiato-accent-rgb) / 10%
+  ); /* background of messages that mention you */
+  --mention-hover: rgba(
+    var(--ctp-macchiato-accent-rgb) / 20%
+  ); /* background of messages that mention you when hovered */
+  --reply: rgba(
+    var(--ctp-macchiato-accent-rgb-2) / 10%
+  ); /* background of messages that reply to you */
+  --reply-hover: rgba(
+    var(--ctp-macchiato-accent-rgb-2) / 5%
+  ); /* background of messages that reply to you when hovered */
+
+  .expressive_c2b88c {
+    --badge-expressive-background-default: var(--accent-1) !important;
+    --badge-expressive-text-default: var(--bg-4) !important;
+  }
+
+  .container__2637a {
+    padding: 0 !important;
+  }
+
+  [class*="textContainer"]:has(code) {
+    scrollbar-color: rgba(var(--ctp-macchiato-overlay2-rgb))
+      rgba(var(--ctp-macchiato-surface0-rgb));
+  }
+
+  pre.shiki,
+  code,
+  .markup__75297 code {
+    color: rgba(var(--ctp-macchiato-text-rgb));
+    background-color: rgba(var(--ctp-macchiato-mantle-rgb));
+    border-color: rgba(var(--ctp-macchiato-overlay0-rgb));
+    font-size: var(--code-font-size);
+    font-weight: var(--code-font-weight);
+    font-feature-settings:
+      "zero" 1,
+      "cv06" 1,
+      "cv07" 1,
+      "cv14" 1;
+
+    b,
+    bold,
+    em,
+    strong {
+      font-weight: 800 !important;
+
+      * {
+        font-weight: 800 !important;
+      }
+    }
+
+    &.inline {
+      background-color: rgba(var(--ctp-macchiato-surface0-rgb));
+      border-color: transparent;
+    }
+  }
+
+  .mention__3b95d {
+    color: #ed87964d !important;
+  }
+
+  .mention__3b95d:active {
+    background-color: #ed879699 !important;
+  }
+
+  /* status indicator colors */
+  --online: rgba(
+    var(--ctp-macchiato-green-rgb)
+  ); /* change to #43a25a for default */
+  --dnd: rgba(var(--ctp-macchiato-red-rgb)); /* change to #d83a42 for default */
+  --idle: rgba(
+    var(--ctp-macchiato-peach-rgb)
+  ); /* change to #ca9654 for default */
+  --streaming: rgba(
+    var(--ctp-macchiato-mauve-rgb)
+  ); /* change to #593695 for default */
+  --offline: rgba(
+    var(--ctp-macchiato-overlay2-rgb)
+  ); /* change to #83838b for default offline color */
+
+  /* border colors */
+  --border-light: none; /* general light border color */
+  --border: rgba(
+    var(--ctp-macchiato-surface0-rgb)
+  ); /* general normal border color */
+  --border-hover: rgba(
+    var(--ctp-macchiato-accent-rgb)
+  ); /* border color of panels when hovered */
+  --button-border: none; /* neutral border color of buttons */
+
+  /* base colors */
+
+  --red-1: rgba(var(--ctp-macchiato-red-rgb)); /* most reds */
+  --red-2: rgba(var(--ctp-macchiato-red-rgb)); /* remove auth */
+  --red-3: rgba(var(--ctp-macchiato-red-rgb)); /* delete acc */
+  --red-4: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-red-rgb)),
+    black 5%
+  ); /* hover state red */
+  --red-5: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-red-rgb)),
+    black 10%
+  ); /* active state red */
+
+  --green-1: rgba(var(--ctp-macchiato-green-rgb));
+  --green-2: rgba(var(--ctp-macchiato-green-rgb));
+  --green-3: rgba(var(--ctp-macchiato-green-rgb));
+  --green-4: color-mix(in srgb, rgba(var(--ctp-macchiato-green-rgb)), black 5%);
+  --green-5: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-green-rgb)),
+    black 10%
+  );
+
+  --blue-1: rgba(var(--ctp-macchiato-blue-rgb));
+  --blue-2: rgba(var(--ctp-macchiato-blue-rgb));
+  --blue-3: rgba(var(--ctp-macchiato-blue-rgb));
+  --blue-4: color-mix(in srgb, rgba(var(--ctp-macchiato-blue-rgb)), black 5%);
+  --blue-5: color-mix(in srgb, rgba(var(--ctp-macchiato-blue-rgb)), black 10%);
+
+  --yellow-1: rgba(var(--ctp-macchiato-peach-rgb));
+  --yellow-2: rgba(var(--ctp-macchiato-peach-rgb));
+  --yellow-3: rgba(var(--ctp-macchiato-peach-rgb));
+  --yellow-4: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-peach-rgb)),
+    black 5%
+  );
+  --yellow-5: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-peach-rgb)),
+    black 10%
+  );
+
+  --purple-1: rgba(var(--ctp-macchiato-mauve-rgb));
+  --purple-2: rgba(var(--ctp-macchiato-mauve-rgb));
+  --purple-3: rgba(var(--ctp-macchiato-mauve-rgb));
+  --purple-4: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-mauve-rgb)),
+    black 5%
+  );
+  --purple-5: color-mix(
+    in srgb,
+    rgba(var(--ctp-macchiato-mauve-rgb)),
+    black 10%
+  );
+
+  .divider__488b1,
+  .winButtonsWithDivider_c38106:before {
+    color: rgba(var(--ctp-macchiato-overlay1-rgb));
+    border-color: rgba(var(--ctp-macchiato-overlay1-rgb));
+  }
+
+  .clickable__81391 {
+    &:is([aria-label="DevTools"], [aria-label="Submit a Bug Report"]) svg {
+      color: var(--interactive-icon-default);
+    }
+  }
+
+  .vc-addon-badge {
+    background-color: #ed8796 !important;
+  }
+
+  .vc-switch-container {
+    border: 1px solid rgba(var(--ctp-macchiato-overlay0-rgb)) !important;
+  }
+
+  .thumbAnchor_e4d939 {
+    background-color: rgba(var(--ctp-macchiato-accent-rgb));
+  }
+
+  .switchIndicator_a28278 {
+    border: 1px solid rgba(var(--ctp-macchiato-overlay0-rgb)) !important;
+
+    &[style*="background-color: rgba(0, 0, 0, 0.12);"] {
+      background-color: rgba(var(--ctp-macchiato-base-rgb)) !important;
+
+      svg.thumb_a28278 rect {
+        fill: rgba(var(--ctp-macchiato-overlay2-rgb));
+        rx: 0;
+      }
+    }
+
+    &[style*="background-color: rgb(88, 101, 242);"] {
+      background-color: rgba(var(--ctp-macchiato-accent-rgb)) !important;
+
+      svg.thumb_a28278 rect {
+        fill: rgba(var(--ctp-macchiato-base-rgb));
+        rx: 0;
+      }
+    }
+  }
+
+  .container__394db .usernameContainer__394db {
+    color: rgba(var(--ctp-macchiato-text-rgb));
+  }
+
+  .vc-platform-indicator svg[fill="#84858d"] {
+    fill: var(--text-muted) !important;
+  }
+
+  .wrapper__6e9f8 {
+    .childWrapper__6e9f8 {
+      color: rgba(var(--ctp-macchiato-accent-rgb));
+      background-color: rgba(var(--ctp-macchiato-surface0-rgb));
+    }
+
+    .favoriteIcon_c9fddf {
+      color: rgba(var(--ctp-macchiato-accent-rgb));
+    }
+
+    &:hover .childWrapper__6e9f8 {
+      background-color: rgba(var(--ctp-macchiato-surface1-rgb));
+    }
+
+    &:active .childWrapper__6e9f8,
+    &:focus .childWrapper__6e9f8,
+    &.selected__6e9f8 .childWrapper__6e9f8 {
+      color: rgba(var(--ctp-macchiato-base-rgb));
+      background-color: rgba(var(--ctp-macchiato-accent-rgb));
+
+      .favoriteIcon_c9fddf {
+        color: rgba(var(--ctp-macchiato-base-rgb));
+      }
+    }
+  }
+}
+
+@container body style(--panel-labels: on) {
+  .visual-refresh {
+    & .guilds__5e434,
+    & .panels__5e434,
+    & .sidebarList__5e434,
+    & .subtitleContainer_f75fb0,
+    & .messagesWrapper__36d07,
+    & .channelTextArea_f75fb0,
+    & .content_f75fb0 > .membersWrap_c8ffbb,
+    & .container_c8ffbb,
+    & .container__133bf > .container__9293f,
+    & .peopleColumn__133bf,
+    & .nowPlayingColumn__133bf,
+    & .container__01ae2 > .container__9293f,
+    & .callContainer_cb9592 {
+      &::after {
+        font-family: var(--label-font);
+        font-feature-settings:
+          "zero" 1,
+          "cv06" 1,
+          "cv07" 1,
+          "cv14" 1;
+        font-size: var(--label-font-size);
+      }
+    }
+  }
+}
+
+@container body style(--ascii-loader: cats) {
+  .content_a2f514::before {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(80%) saturate(1008%)
+      hue-rotate(190deg) brightness(120%) contrast(92%);
+  }
+}

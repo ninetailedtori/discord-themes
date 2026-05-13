@@ -1,0 +1,48 @@
+:root {
+  --shiki-color-foreground: #4c4f69ff;
+  --shiki-color-background: #e6e9efff;
+
+  --shiki-token-constant: #fe640bff;
+  --shiki-token-string: #40a02bff;
+  --shiki-token-comment: #7c7f93ff;
+  --shiki-token-keyword: #8839efff;
+  --shiki-token-parameter: #e64553ff;
+  --shiki-token-function: #1e66f5ff;
+  --shiki-token-string-expression: #ea76cbff;
+  --shiki-token-punctuation: #04a5e5ff;
+  --shiki-token-link: #1e66f5ff;
+
+  --shiki-ansi-black: #5c5f77ff;
+  --shiki-ansi-black-dim: #5c5f77ffcc;
+  --shiki-ansi-red: #d20f39ff;
+  --shiki-ansi-red-dim: #d20f39ffcc;
+  --shiki-ansi-green: #40a02bff;
+  --shiki-ansi-green-dim: #40a02bffcc;
+  --shiki-ansi-yellow: #df8e1dff;
+  --shiki-ansi-yellow-dim: #df8e1dffcc;
+  --shiki-ansi-blue: #1e66f5ff;
+  --shiki-ansi-blue-dim: #1e66f5ffcc;
+  --shiki-ansi-magenta: #ea76cbff;
+  --shiki-ansi-magenta-dim: #ea76cbffcc;
+  --shiki-ansi-cyan: #179299ff;
+  --shiki-ansi-cyan-dim: #179299ffcc;
+  --shiki-ansi-white: #acb0beff;
+  --shiki-ansi-white-dim: #acb0beffcc;
+
+  --shiki-ansi-bright-black: #6c6f85ff;
+  --shiki-ansi-bright-black-dim: #6c6f85ffcc;
+  --shiki-ansi-bright-red: #de293eff;
+  --shiki-ansi-bright-red-dim: #de293effcc;
+  --shiki-ansi-bright-green: #49af3dff;
+  --shiki-ansi-bright-green-dim: #49af3dffcc;
+  --shiki-ansi-bright-yellow: #eea02dff;
+  --shiki-ansi-bright-yellow-dim: #eea02dffcc;
+  --shiki-ansi-bright-blue: #456effff;
+  --shiki-ansi-bright-blue-dim: #456effffcc;
+  --shiki-ansi-bright-magenta: #fe85d8ff;
+  --shiki-ansi-bright-magenta-dim: #fe85d8ffcc;
+  --shiki-ansi-bright-cyan: #2d9fa8ff;
+  --shiki-ansi-bright-cyan-dim: #2d9fa8ffcc;
+  --shiki-ansi-bright-white: #bcc0ccff;
+  --shiki-ansi-bright-white-dim: #bcc0ccffcc;
+}

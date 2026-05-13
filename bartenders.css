@@ -1,0 +1,76 @@
+/*
+ * Simple drawers for Discord and Vencord's toolbars, hover over one of the two
+ * menu bartenders "∙∙∙" to open.
+ */
+
+.title_f75fb0:has(.children__9293f .avatar_f75fb0) {
+  margin-top: 6px;
+
+  &:has(.toolbar__9293f:hover, .trailing_c38106:hover) {
+    margin: 0px;
+  }
+}
+
+.toolbar__9293f {
+  display: flex !important;
+  position: relative;
+  left: 150px;
+  width: var(--bartender-width);
+
+  &::after {
+    content: "∙∙∙";
+    font-size: 110%;
+    color: var(--text-muted);
+  }
+
+  .clickable__9293f,
+  .search__49676 {
+    display: none;
+  }
+
+  &:hover,
+  &:has(.open_c322aa, .focused_c322aa) {
+    left: 180px;
+    width: unset;
+
+    &::after {
+      content: "⋮";
+    }
+
+    .clickable__9293f,
+    .search__49676 {
+      display: flex;
+    }
+  }
+}
+
+.trailing_c38106 {
+  display: flex !important;
+  width: var(--bartender-width);
+
+  &::after {
+    content: "∙∙∙";
+    font-size: 110%;
+    color: var(--text-muted);
+  }
+
+  [role="button"] {
+    display: none !important;
+  }
+
+  &:hover {
+    width: unset;
+
+    &::after {
+      content: "⋮";
+    }
+
+    [role="button"] {
+      display: flex !important;
+    }
+  }
+}
+
+.bar_c38106:has(.trailing_c38106:hover) + .content__5e434 .toolbar__9293f {
+  left: -50px;
+}
