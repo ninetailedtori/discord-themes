@@ -6,11 +6,11 @@
  */
 
 /* import theme modules */
-/* @import "bartenders.css"; */
-/* @import "better-searchbar.css"; */
-/* @import "chatbar-placeholder.css"; */
+@import url("https://raw.githubusercontent.com/ninetailedtori/discord-themes/refs/heads/main/bartenders.css");
+@import url("https://raw.githubusercontent.com/ninetailedtori/discord-themes/refs/heads/main/better-searchbar.css");
+@import url("https://raw.githubusercontent.com/ninetailedtori/discord-themes/refs/heads/main/chatbar-placeholder.css");
 @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
-/* @import "shiki-macchiato.css"; */
+@import url("https://raw.githubusercontent.com/ninetailedtori/discord-themes/refs/heads/main/shiki-macchiato.css");
 @import url("https://unpkg.com/@catppuccin/highlightjs@1.0.0/css/catppuccin-variables.important.css");
 /* @import url("https://refact0r.github.io/system24/build/system24.css"); */
 @import url("http://127.0.0.1:8000/system24.css");
