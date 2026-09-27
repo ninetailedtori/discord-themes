@@ -12,8 +12,8 @@
 @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
 @import url("https://raw.githubusercontent.com/ninetailedtori/discord-themes/main/extras/shiki-macchiato.css");
 @import url("https://unpkg.com/@catppuccin/highlightjs@1.0.0/css/catppuccin-variables.important.css");
-/* @import url("https://refact0r.github.io/system24/build/system24.css"); */
-@import url("http://127.0.0.1:8000/system24.css");
+@import url("https://refact0r.github.io/system24/build/system24.css");
+/* @import url("https://raw.githubusercontent.com/ninetailedtori/discord-themes/main/themes/system24.css"); */
 
 body {
   --bartender-width: 4ch; /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */

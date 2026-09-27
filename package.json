@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "prepare": "pnpm run lint && pnpm run fmt",
+    "build": "whiskers src/shiki.tera"
     "lint": "pnpm run lint:oxlint && pnpm run lint:eslint",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",

@@ -3,7 +3,7 @@ whiskers:
   version: "^2.5.1"
   matrix:
     - flavor
-  filename: "shiki-{{ flavor.identifier }}.css"
+  filename: "extras/shiki-{{ flavor.identifier }}.css"
   hex_format: "#{{r}}{{g}}{{b}}{{a}}"
 ---
 :root {
