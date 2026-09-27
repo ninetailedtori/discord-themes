@@ -10,9 +10,6 @@
   "sortPackageJson": true,
   "ignorePatterns": [
     "*-BD/*",
-    "renderer/auto-imports.d.ts",
-    "renderer/components.d.ts",
-    "renderer/typed-router.d.ts",
     ".eslintrc-auto-import.json",
     "pnpm-lock.yaml"
   ]

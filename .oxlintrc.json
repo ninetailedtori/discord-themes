@@ -1,9 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["eslint", "typescript", "unicorn", "oxc", "vue", "vitest"],
-  "env": {
-    "browser": true
-  },
+  "plugins": ["oxc"],
   "categories": {
     "correctness": "error"
   },
